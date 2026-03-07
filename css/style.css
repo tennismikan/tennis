@@ -77,7 +77,7 @@ img {
 .cover {
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 /* =====================
    About Section
