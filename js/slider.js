@@ -1,15 +1,21 @@
-const slides = document.querySelector(".slides");
-const total = document.querySelectorAll(".slide").length;
+const sliders = document.querySelectorAll(".slides");
 
-let index = 0;
+sliders.forEach(slides => {
 
-setInterval(() => {
-    index++;
+    const slide = slides.querySelectorAll(".slide");
+    const total = slide.length;
 
-    if(index >= total){
-        index = 0;
-    }
+    let index = 0;
 
-    slides.style.transform = `translateX(-${index * 100}%)`;
+    setInterval(() => {
+        index++;
 
-}, 4000);
+        if(index >= total){
+            index = 0;
+        }
+
+        slides.style.transform = `translateX(-${index * 100}%)`;
+
+    }, 4000);
+
+});

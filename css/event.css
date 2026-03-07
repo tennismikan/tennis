@@ -1,0 +1,29 @@
+.event-card {
+    margin-bottom: 40px;
+}
+.cover-home {
+    position: relative;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+        z-index: -1;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
