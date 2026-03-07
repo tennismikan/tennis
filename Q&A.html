@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <link rel="stylesheet" href="css/header.css">
+        <meta charset="utf-8">
+         <title>滋賀県立大学硬式テニス部</title>
+         <link rel="icon" type="image/png" href="images/logo.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/Q&A.css">
+    </head>
+        <link rel="stylesheet" href="css/header.css">
+    <body>
+        <header class="header">
+            <h1 class="align-center">
+            <a href="tennisweb.html">
+                <img class="logo" src="images/logo.jpg" alt="USP TENNIS WEBSITE">
+            </a>
+            <span class="site-name">滋賀県立大学 硬式テニス部</span>
+            </h1>
+            <button class="menu-toggle">☰</button>
+             <nav class="main-nav">
+                <ul class="font-english">
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="event.html">イベント</a></li>
+                    <li><a href="members.html">メンバー</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>よくある質問</h2>
+                <dl id="faq">
+                    <dt>テニス初心者でも入部できますか？</dt>
+                    <dd>はい、初心者大歓迎です!基礎から丁寧に教えます。</dd>
+                    <dt>練習頻度はどのくらいですか？</dt>
+                    <dd>週3回（水、木、土）練習しています!</dd>
+                    <dt>部費はいくらですか？</dt>
+                    <dd>部費は月額2000円で、イベントやテニス物品の購入に使用します。</dd>
+                    <dt>ラケットや道具は必要ですか？</dt>
+                    <dd>貸出もあるので、最初は手ぶらでも大丈夫です!気軽に来てください!</dd>
+                </dl>
+            </section>
+        </main>
+            <script src="js/main.js"></script>
+            <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const dts = document.querySelectorAll("#faq dt");
+    const dds = document.querySelectorAll("#faq dd");
+    dds.forEach(dd => dd.style.display = "none"); // 最初は非表示
+
+    dts.forEach(dt => {
+        dt.addEventListener("click", function() {
+            const dd = dt.nextElementSibling;
+            const isOpen = dt.classList.contains("open");
+            dts.forEach(d => d.classList.remove("open"));
+            dds.forEach(d => d.style.display = "none");
+            if (!isOpen) {
+                dt.classList.add("open");
+                dd.style.display = "block";
+            }
+        });
+    });
+});
+</script>
+    </body>
+</html>

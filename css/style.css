@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+/* =====================
+   Base
+===================== */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =====================
+   Typography
+===================== */
+.font-english {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: normal;
+}
+
+.heading-large {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.page-title {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    text-align: center;
+    color: white;
+    text-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    margin-top: 30vh;
+    letter-spacing: 2px;
+}
+/* ===== Hero / Slider ===== */
+.cover-home {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+/* =====================
+   Hero Section
+===================== */
+.cover {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+/* =====================
+   About Section
+===================== */
+.about {
+    max-width: 736px;
+    margin: 3rem auto 4rem;
+    padding: 0 1.5rem;
+}
+
+.about p {
+    margin-bottom: 3rem;
+}
+
+/* =====================
+   Button
+===================== */
+.btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    background-color: #00ff1e;
+    color: white;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: 0.3s;
+}
+.align-center {
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #00c417;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =====================
+   Footer
+===================== */
+.page-footer {
+    background: url(../images/IMG_8571.JPG) center / cover no-repeat;
+    color: white;
+    padding: 4rem 0;
+}
+.info {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    border-collapse: collapse;
+}
+
+.info th,
+.info td {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.info th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+
+.info td {
+    padding: 1rem 0;
+}
+
+.insta-fixed {
+    position: fixed;           /* 画面に固定表示 */
+    right: 24px;               /* 右端から24px */
+    bottom: 24px;              /* 下端から24px */
+    z-index: 1000;             /* 他の要素より前面に */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.insta-fixed:hover {
+
+    box-shadow: 0 8px 24px rgba(76,175,80,0.25);
+    transform: translateY(-3px);
+}
+.insta-fixed img {
+    width: 36px;
+    height: 36px;
+    border-radius: 20%;   /* 画像も丸く切り抜く */
+    object-fit: cover;    /* 画像を中央で切り抜き、はみ出さないように */
+}
+
+

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+    background: #f7f7f7;
+}
+main {
+    max-width: 480px;      /* 最大幅を480pxに制限（スマホでも見やすい） */
+    width: 90vw;           /* 画面幅の90%まで広げる */
+    margin: 40px auto;     /* 上下40px、左右中央寄せ */
+    background: #fff;
+    padding: 24px 16px;    /* 内側の余白 */
+    border-radius: 8px;    /* 角を丸く */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+form label {
+    display: block;
+    margin-bottom: 16px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.submit-btn, button[type="submit"] {
+    display: inline-block;
+    font-size: 1.2rem;
+    background-color: #00ff1e;
+    color: white;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: 0.3s;
+}
+.submit-btn:hover, button[type="submit"]:hover {
+    background-color: #00c417;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+}
