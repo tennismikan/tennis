@@ -65,6 +65,9 @@ body {
 
 /* スマホ */
 @media (max-width: 768px) {
+    body {
+    overflow-x: hidden;
+}
     .header {
         padding: 1rem 1.5rem;
     }
