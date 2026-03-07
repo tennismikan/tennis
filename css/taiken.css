@@ -7,7 +7,7 @@ body {
     background: #f7f7f7;
 }
 main {
-    max-width: 480px;      /* 最大幅を480pxに制限（スマホでも見やすい） */
+    max-width: auto;      /* 最大幅を480pxに制限（スマホでも見やすい） */
     width: 90vw;           /* 画面幅の90%まで広げる */
     margin: 40px auto;     /* 上下40px、左右中央寄せ */
     background: #fff;
