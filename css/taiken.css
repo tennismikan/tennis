@@ -51,3 +51,10 @@ textarea {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 
 }
+@media (max-width: 768px) {
+    main {
+        width: 95vw;
+        margin: 10px auto; /* 画面幅の95%まで広げる */
+        padding: 16px; /* 内側の余白を減らす */
+    }
+}
