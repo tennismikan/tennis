@@ -76,7 +76,7 @@ img {
 ===================== */
 .cover {
     background-size: cover;
-    background-position: center;
+    background-position: center -10px;
     min-height: 80vh;
 }
 /* =====================
