@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.body {
+    overflow: hidden;
+}
 .site-name {
     color: aliceblue;
 }
@@ -30,13 +33,13 @@
    Navigation
 ===================== */
 .main-nav {
-    overflow: hidden;
+    width: auto;
+    overflow-x: hidden;
     display: flex;
     gap: 2rem;
     position: static;
     background: none;
     flex-direction: row;
-    width: auto;
     padding: 0;
     transition: none;
     z-index: 100;
@@ -63,8 +66,8 @@
 
 /* スマホ */
 @media (max-width: 768px) {
-    body {
-    overflow-x: hidden;
+.body {
+    width: auto;
 }
     .header {
         padding: 1rem 1.5rem;
@@ -77,21 +80,25 @@
         transform: translateY(-50%);
         z-index: 2000;
     }
-    .main-nav {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: rgba(0,0,0,0.95);
-        flex-direction: column;
-        padding: 1rem 1.5rem;
-        transform: translateX(110%);
-        transition: transform 0.3s ease;
-        display: flex;
-        z-index: 1500;
-    }
-    .main-nav.active {
-        transform: translateX(0);
-    }
+ body {
+    overflow-x: hidden;
+}
+
+.main-nav {
+    position: fixed;   /* absolute → fixed */
+    top: 100%;
+    right: -250px;     /* 画面外に隠す */
+    width: auto;
+    height: auto;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    padding: 2rem;
+    transition: right 0.3s ease;
+}
+
+.main-nav.active {
+    right: 0;
+}
     .main-nav li {
         margin-bottom: 1rem;
     }
